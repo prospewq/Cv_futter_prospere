@@ -12,23 +12,23 @@ import 'services/api_service.dart';
 void main() => runApp(const MyApp());
 
 // ====== A PERSONNALISER ======
-const kNom = 'Jean Alinde Kawende';
+const kNom = 'Amza Ongona Prospere';
 const kTitre = 'Étudiant en informatique • Développeur mobile';
 const kPhoto = 'assets/images/moi.jpg';
 
 // ================= DESIGN TOKENS =================
 class C {
-  static const bg = Color(0xFF050816);
-  static const blue = Color(0xFF3B82F6);
-  static const violet = Color(0xFF8B5CF6);
-  static const cyan = Color(0xFF22D3EE);
-  static const pink = Color(0xFFEC4899);
-  static const text = Color(0xFFF1F5F9);
-  static const muted = Color(0xFF94A3B8);
+  static const bg = Color(0xFF080808);
+  static const blue = Color(0xFFFACC15);
+  static const violet = Color(0xFFEAB308);
+  static const cyan = Color(0xFFFDE047);
+  static const pink = Color(0xFFF59E0B);
+  static const text = Color(0xFFF5F5F5);
+  static const muted = Color(0xFFA3A3A3);
 
   static const btn = LinearGradient(colors: [blue, violet]);
   static const textGrad = LinearGradient(
-    colors: [Color(0xFF60A5FA), Color(0xFFA78BFA), Color(0xFF22D3EE)],
+    colors: [Color(0xFFFDE047), Color(0xFFFACC15), Color(0xFFEAB308)],
   );
 }
 
@@ -68,7 +68,7 @@ class MyApp extends StatelessWidget {
       scaffoldBackgroundColor: C.bg,
       snackBarTheme: SnackBarThemeData(
         behavior: SnackBarBehavior.floating,
-        backgroundColor: const Color(0xFF1E1B4B),
+        backgroundColor: const Color(0xFF1A1A1A),
         contentTextStyle: const TextStyle(color: Colors.white),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(14)),
       ),
@@ -394,7 +394,7 @@ class Avatar extends StatelessWidget {
   @override
   Widget build(BuildContext context) => CircleAvatar(
     radius: radius,
-    backgroundColor: const Color(0xFF101935),
+    backgroundColor: const Color(0xFF151515),
     child: ClipOval(
       child: path.isEmpty
           ? Icon(Icons.person, size: radius, color: C.blue)
@@ -582,7 +582,7 @@ class _LoginPageState extends State<LoginPage>
     final ok = await showDialog<bool>(
       context: context,
       builder: (_) => AlertDialog(
-        backgroundColor: const Color(0xFF0E1530),
+        backgroundColor: const Color(0xFF151515),
         title: const Text('Adresse de l’API'),
         content: Column(
           mainAxisSize: MainAxisSize.min,
@@ -1515,7 +1515,7 @@ class _FamillePageState extends State<FamillePage> {
     final ok = await showDialog<bool>(
       context: context,
       builder: (_) => AlertDialog(
-        backgroundColor: const Color(0xFF0E1530),
+        backgroundColor: const Color(0xFF151515),
         title: const Text('Supprimer ce membre ?'),
         content: Text(
           '${m.nomComplet} sera supprimé définitivement, ainsi que sa photo.',
@@ -1711,7 +1711,7 @@ class _FamillePageState extends State<FamillePage> {
                 ),
               ),
               PopupMenuButton<String>(
-                color: const Color(0xFF111A3A),
+                color: const Color(0xFF181818),
                 icon: const Icon(Icons.more_vert_rounded, color: C.muted),
                 onSelected: (v) => v == 'edit' ? _openForm(m) : _delete(m),
                 itemBuilder: (_) => const [
@@ -1796,7 +1796,7 @@ class _FamillePageState extends State<FamillePage> {
               }
               return RefreshIndicator(
                 color: C.violet,
-                backgroundColor: const Color(0xFF0E1530),
+                backgroundColor: const Color(0xFF151515),
                 onRefresh: _refresh,
                 child: _grid(list.length, (i) => _card(list[i], i)),
               );
@@ -1986,7 +1986,7 @@ class _MembreFormState extends State<MembreForm> {
     } else {
       inner = const CircleAvatar(
         radius: 46,
-        backgroundColor: Color(0xFF101935),
+        backgroundColor: Color(0xFF151515),
         child: Icon(Icons.add_a_photo_rounded, color: C.cyan, size: 30),
       );
     }
@@ -2022,7 +2022,7 @@ class _MembreFormState extends State<MembreForm> {
   @override
   Widget build(BuildContext context) => Container(
     decoration: BoxDecoration(
-      color: const Color(0xFF0B1230),
+      color: const Color(0xFF121212),
       borderRadius: const BorderRadius.vertical(top: Radius.circular(28)),
       border: Border.all(color: Colors.white.withValues(alpha: .12)),
     ),
@@ -2179,8 +2179,8 @@ class ContactPage extends StatelessWidget {
     Ct(
       Icons.email_outlined,
       'E-mail',
-      'jeanalindekabwende@gemail.com',
-      'mailto:jeanalindekabwende@gemail.com',
+      'prosperongona5@gmail.com',
+      'mailto:prosperongona5@gmail.com',
       C.violet,
     ),
     Ct(
